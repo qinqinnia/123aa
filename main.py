@@ -46,12 +46,12 @@ def get_weather():
 
 # 获取情话
 def get_text():
-  # url = "https://v2.alapi.cn/api/qinghua?token=LwExDtUWhF3rH5ib"
-  url = "https://v.api.aa1.cn/api/api-wenan-gaoxiao/index.php?aa1=json"
+  # url = "https://v.api.aa1.cn/api/api-wenan-mingrenmingyan/index.php"
+  url = "https://v.api.aa1.cn/api/api-wenan-mingrenmingyan/index.php?aa1=json"
   res = requests.get(url).json()
   if res is None:
     return None
-  text = res['gaoxiao'][0]
+  text = res['mingrenmingyan']
   return text
 
 # 获取当前日期为星期几
